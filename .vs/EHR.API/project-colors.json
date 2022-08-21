@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1c5e38ce-f119-49ed-bfb8-b3f3272e6813": {
+      "ProjectGuid": "1c5e38ce-f119-49ed-bfb8-b3f3272e6813",
+      "DisplayName": "EHR.API",
+      "ColorIndex": 0
+    },
+    "2eed9a78-aeda-4e73-a9dc-ead14d16f2ce": {
+      "ProjectGuid": "2eed9a78-aeda-4e73-a9dc-ead14d16f2ce",
+      "DisplayName": "EHR.Application",
+      "ColorIndex": 1
+    },
+    "7c95d29c-6010-4a59-83be-0b6583db0c4e": {
+      "ProjectGuid": "7c95d29c-6010-4a59-83be-0b6583db0c4e",
+      "DisplayName": "EHR.Database",
+      "ColorIndex": 2
+    },
+    "84737867-9f3d-4712-9712-bb11b59631a5": {
+      "ProjectGuid": "84737867-9f3d-4712-9712-bb11b59631a5",
+      "DisplayName": "EHR.Infrastructure",
+      "ColorIndex": 3
+    },
+    "5f9bdb57-12db-4685-b08d-9b869712bb41": {
+      "ProjectGuid": "5f9bdb57-12db-4685-b08d-9b869712bb41",
+      "DisplayName": "EHR.Shared",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
