@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EHR.Application\EHR.Application.csproj" />
+    <ProjectReference Include="..\EHR.Infrastructure\EHR.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
