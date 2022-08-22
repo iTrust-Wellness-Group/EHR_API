@@ -1,0 +1,12 @@
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\bin\Debug\net6.0\EHR.Shared.deps.json
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\bin\Debug\net6.0\EHR.Shared.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\bin\Debug\net6.0\ref\EHR.Shared.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\bin\Debug\net6.0\EHR.Shared.pdb
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\EHR.Shared.csproj.AssemblyReference.cache
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\EHR.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\EHR.Shared.AssemblyInfoInputs.cache
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\EHR.Shared.AssemblyInfo.cs
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\EHR.Shared.csproj.CoreCompileInputs.cache
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\EHR.Shared.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\ref\EHR.Shared.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Shared\obj\Debug\net6.0\EHR.Shared.pdb
