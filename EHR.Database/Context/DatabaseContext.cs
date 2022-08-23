@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using EHR.Database.Entities;
 
-namespace EHR.Database.Entities
+namespace EHR.Database.Context
 {
     public partial class DatabaseContext : DbContext
     {
@@ -32,7 +33,7 @@ namespace EHR.Database.Entities
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-         
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

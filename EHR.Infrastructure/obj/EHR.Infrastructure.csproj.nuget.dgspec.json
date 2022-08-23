@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\Library\\AWS": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,6 +115,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\Library\\AWS": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,9 +138,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AWS": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",

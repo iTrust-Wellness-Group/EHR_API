@@ -1,6 +1,7 @@
 using Dapper;
 using EHR.Database.Context;
 using EHR.Database.Entities;
+using EHR.Infrastructure.Repositories.Query;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EHR.API.Controllers
@@ -14,31 +15,17 @@ namespace EHR.API.Controllers
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-        private readonly ILogger<WeatherForecastController> _logger;
-        private DatabaseContext context;
-        private DapperQueryContext _context;
-        public WeatherForecastController(ILogger<WeatherForecastController> logger,DatabaseContext dbcontext, DapperQueryContext _context)
+        Test test;
+        public WeatherForecastController(Test test)
         {
-            _logger = logger;
-            this.context = dbcontext;
-            this._context = _context;
+            this.test = test;   
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            //EF Core
-            //Office office = new Office();
-            //office.Id = Guid.NewGuid();
-            //office.Name = "Test";
-            //this.context.Offices.Add(office);
-            //this.context.SaveChanges();
 
-            //var list = this.context.Offices.ToList();
-            //Dapper
-            //using var connection = this._context.CreateConnection();
-            //var result = connection.Query<Office>(@"select * from ""Office""").ToList();
-
+            test.TestFunc();
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
