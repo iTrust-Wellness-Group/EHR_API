@@ -54,3 +54,8 @@ C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\AWSSDK.SecretsManager.dll
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\Amazon.SecretsManager.Extensions.Caching.dll
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\MediatR.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

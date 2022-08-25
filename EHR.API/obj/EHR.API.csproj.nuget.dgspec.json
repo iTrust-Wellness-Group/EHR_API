@@ -59,6 +59,14 @@
               "target": "Package",
               "version": "[2.0.123, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -120,7 +128,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj": {
+                "projectPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -133,6 +145,26 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -279,6 +311,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Application\\EHR.Application.csproj": {
+                "projectPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Application\\EHR.Application.csproj"
+              },
               "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj": {
                 "projectPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj"
               }

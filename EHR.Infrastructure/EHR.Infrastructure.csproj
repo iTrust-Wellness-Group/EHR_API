@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Repositories\Command\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EHR.Application\EHR.Application.csproj" />
     <ProjectReference Include="..\EHR.Database\EHR.Database.csproj" />
   </ItemGroup>
 
