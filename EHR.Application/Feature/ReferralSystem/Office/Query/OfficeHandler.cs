@@ -17,11 +17,10 @@ namespace EHR.Application.Feature.ReferralSystem.Office.Query
             this.service = service;
         }
 
-
         public async Task<ResponseData<List<OfficeRes>>> Handle(OfficeReq request, CancellationToken cancellationToken)
         {
-            
-            List<OfficeRes> list =  this.service.getOfficeList(request.Name);
+
+            List<OfficeRes> list = this.service.getOfficeList(request.Name);
             var response = new ResponseData<List<OfficeRes>>(list);
             return await Task.FromResult(response);
         }

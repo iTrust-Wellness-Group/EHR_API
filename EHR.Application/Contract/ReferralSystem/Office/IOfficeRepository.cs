@@ -9,6 +9,10 @@ namespace EHR.Application.Contract.ReferralSystem.Office
 {
     public interface IOfficeRepository
     {
+        /// <summary>
+        ///  Hello
+        /// </summary>
+        /// <returns></returns>
         public List<OfficeRes> getOfficeList();
         public List<OfficeRes> getOfficeList(String Name);
     }
