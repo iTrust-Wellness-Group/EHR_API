@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 
 namespace EHR.Application.Feature.UnitOfWork
 {
-    public interface IUnitOfWork
+    public class ServiceContext : IServiceContext
     {
-        //IOrderRepository orderRepo { get ;}
 
-        //bool Complete();
+        public IOfficeRepository office { get; private set; }
+
+        public ServiceContext(IOfficeRepository office)
+        {
+            this.office = office;
+        }
+
     }
 }

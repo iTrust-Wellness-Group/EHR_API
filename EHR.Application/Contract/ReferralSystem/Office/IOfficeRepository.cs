@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 
 namespace EHR.Application.Contract.ReferralSystem.Office
 {
-    public interface IOfficeRepository
+    public interface IOfficeRepository : IBaseCommandRepository<EHR.Database.Entities.Office>
     {
-        /// <summary>
-        ///  Hello
-        /// </summary>
-        /// <returns></returns>
-        public List<OfficeRes> getOfficeList();
-        public List<OfficeRes> getOfficeList(String Name);
+        // only init OfficeRepository
+
     }
 }

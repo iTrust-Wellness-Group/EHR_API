@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EHR.Application.Feature
+namespace EHR.Application.Feature.UnitOfWork
 {
-    public class BaseHandler 
+    public interface IUnitOfWork
     {
-    
+        IOfficeRepository office { get;  }
     }
 }

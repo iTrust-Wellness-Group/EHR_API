@@ -158,7 +158,7 @@ namespace EHR.Infrastructure.Repositories.Command
             return CommandContext.Set<TEntity>().FindAsync(expression);
         }
 
-        public Task<List<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> expression)
+        public Task<List<TEntity>> FindMultiAsync(Expression<Func<TEntity, bool>> expression)
         {
             return CommandContext.Set<TEntity>().Where(expression).ToListAsync();
         }

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using EHR.Application.Feature.UnitOfWork;
+using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -18,6 +19,7 @@ namespace EHR.Application
             //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidatorBehavior<,>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
     }

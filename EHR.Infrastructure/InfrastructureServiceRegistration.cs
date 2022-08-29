@@ -23,15 +23,9 @@ namespace EHR.Infrastructure
             );
             #endregion
 
-            #region QueryRepository
+            #region Repository
             services.AddScoped<IOfficeRepository, OfficeRepository>();
             #endregion
-
-            #region CommandRepository
-            services.AddScoped<IOfficeCommandRepository, OfficeCommandRespository>();
-
-            #endregion
-
             return services;
         }
     }
