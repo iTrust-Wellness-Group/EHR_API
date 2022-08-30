@@ -19,7 +19,7 @@ namespace EHR.Application
             //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidatorBehavior<,>));
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IServiceContext, ServiceContext>();
             return services;
         }
     }

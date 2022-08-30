@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace EHR.Application.Feature.UnitOfWork
 {
-    public interface IUnitOfWork
+    public interface IServiceContext
     {
-        IOfficeRepository office { get;  }
+      IOfficeRepository office { get;  }
     }
 }

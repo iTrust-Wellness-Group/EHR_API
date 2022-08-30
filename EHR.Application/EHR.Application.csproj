@@ -20,8 +20,4 @@
     <ProjectReference Include="..\EHR.Database\EHR.Database.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Feature\ReferralSystem\Office\Models\" />
-  </ItemGroup>
-
 </Project>

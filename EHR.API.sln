@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHR.API", "EHR.API\EHR.API.csproj", "{1C5E38CE-F119-49ED-BFB8-B3F3272E6813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHR.API", "EHR.API\EHR.API.csproj", "{1C5E38CE-F119-49ED-BFB8-B3F3272E6813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHR.Application", "EHR.Application\EHR.Application.csproj", "{2EED9A78-AEDA-4E73-A9DC-EAD14D16F2CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHR.Application", "EHR.Application\EHR.Application.csproj", "{2EED9A78-AEDA-4E73-A9DC-EAD14D16F2CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHR.Database", "EHR.Database\EHR.Database.csproj", "{7C95D29C-6010-4A59-83BE-0B6583DB0C4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHR.Database", "EHR.Database\EHR.Database.csproj", "{7C95D29C-6010-4A59-83BE-0B6583DB0C4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHR.Infrastructure", "EHR.Infrastructure\EHR.Infrastructure.csproj", "{84737867-9F3D-4712-9712-BB11B59631A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHR.Infrastructure", "EHR.Infrastructure\EHR.Infrastructure.csproj", "{84737867-9F3D-4712-9712-BB11B59631A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHR.Shared", "EHR.Shared\EHR.Shared.csproj", "{5F9BDB57-12DB-4685-B08D-9B869712BB41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EHR.Shared", "EHR.Shared\EHR.Shared.csproj", "{5F9BDB57-12DB-4685-B08D-9B869712BB41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHR.Identity", "EHR.Identity\EHR.Identity.csproj", "{388F7C8F-9C78-43EB-8091-3F8EBB6DDD92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5F9BDB57-12DB-4685-B08D-9B869712BB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F9BDB57-12DB-4685-B08D-9B869712BB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F9BDB57-12DB-4685-B08D-9B869712BB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{388F7C8F-9C78-43EB-8091-3F8EBB6DDD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388F7C8F-9C78-43EB-8091-3F8EBB6DDD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388F7C8F-9C78-43EB-8091-3F8EBB6DDD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388F7C8F-9C78-43EB-8091-3F8EBB6DDD92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
