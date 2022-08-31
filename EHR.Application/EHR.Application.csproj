@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EHR.Database\EHR.Database.csproj" />
+    <ProjectReference Include="..\EHR.Identity\EHR.Identity.csproj" />
   </ItemGroup>
 
 </Project>

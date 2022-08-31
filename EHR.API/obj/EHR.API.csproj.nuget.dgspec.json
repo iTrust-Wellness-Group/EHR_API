@@ -134,6 +134,9 @@
             "projectReferences": {
               "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj": {
                 "projectPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj"
+              },
+              "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Identity\\EHR.Identity.csproj": {
+                "projectPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Identity\\EHR.Identity.csproj"
               }
             }
           }
@@ -330,6 +333,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.22.1, )"

@@ -3,6 +3,7 @@ using EHR.Application.Feature.ReferralSystem.Office.Command;
 using EHR.Application.Feature.ReferralSystem.Office.Models;
 using EHR.Application.Feature.ReferralSystem.Office.Query;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 namespace EHR.API.Controllers.ReferralSystem
@@ -18,9 +19,10 @@ namespace EHR.API.Controllers.ReferralSystem
         }
 
         [HttpGet("Office/{Name}")]
+        [Authorize]
         public async Task<IActionResult> GetOffice(String Name)
         {
-            var res = await _mediator.Send(new OfficeSearchSearchModel() { Name = Name });
+            var res = await _mediator.Send(new OfficeSearchModel() { Name = Name });
             return Ok(res);
         }
         [HttpPost("Office")]

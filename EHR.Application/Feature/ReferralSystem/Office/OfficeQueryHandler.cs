@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EHR.Application.Feature.ReferralSystem.Office.Query
 {
-    public class OfficeQueryHandler : BaseHandler, IRequestHandler<OfficeSearchSearchModel, ResponseData<List<OfficeModel>>>
+    public class OfficeQueryHandler : BaseHandler, IRequestHandler<OfficeSearchModel, ResponseData<List<OfficeModel>>>
     {
         IServiceContext _serviceContext;
         public OfficeQueryHandler(IServiceContext serviceContext)
@@ -19,7 +19,7 @@ namespace EHR.Application.Feature.ReferralSystem.Office.Query
             this._serviceContext = serviceContext;
         }
 
-        public async Task<ResponseData<List<OfficeModel>>> Handle(OfficeSearchSearchModel request, CancellationToken cancellationToken)
+        public async Task<ResponseData<List<OfficeModel>>> Handle(OfficeSearchModel request, CancellationToken cancellationToken)
         {
 
             var list = await this._serviceContext.office.GetAllAsync();

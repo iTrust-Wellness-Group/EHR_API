@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EHR.Identity.Interface
 {
-    internal interface IJWTService
+    public interface IJWTService
     {
         public string GenerateTokens(JWTUserTypeEnum jute, Claim[] claims, DateTime now, bool isRefresh = false);
 

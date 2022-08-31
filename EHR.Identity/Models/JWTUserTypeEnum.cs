@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EHR.Identity.Models
 {
-    internal enum JWTUserTypeEnum
+    public enum JWTUserTypeEnum
     {
         Frontend = 1,
         Backend = 2

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "C6XQQvddFcD1xJDVDCHOqQw+Cu7xNCmKKKf4EFVxYL0=",
+  "Source": "EHR.API",
+  "BasePath": "_content/EHR.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

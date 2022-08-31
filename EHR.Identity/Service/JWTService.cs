@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EHR.Identity.Service
 {
-    internal class JWTService : IJWTService
+    public class JWTService : IJWTService
     {
         private readonly FrontendJwtTokenConfig _frontendJwtTokenConfig;
         private readonly BackendJwtTokenConfig _backendJwtTokenConfig;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EHR.Identity.Models
 {
-    internal class BackendJwtTokenConfig:JwtTokenConfig
+    public class BackendJwtTokenConfig:JwtTokenConfig
     {
     }
 }

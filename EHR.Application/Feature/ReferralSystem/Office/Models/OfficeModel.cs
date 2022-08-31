@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EHR.Application.Feature.ReferralSystem.Office.Models
 {
-    public class OfficeSearchSearchModel : IRequest<ResponseData<List<OfficeModel>>>
+    public class OfficeSearchModel : IRequest<ResponseData<List<OfficeModel>>>
     {
         public String Name { get; set; }
 

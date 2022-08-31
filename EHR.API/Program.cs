@@ -1,6 +1,11 @@
 using EHR.Application;
 using EHR.Infrastructure;
 using EHR.Identity;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Net;
+using Microsoft.IdentityModel.Logging;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Module Service
@@ -26,7 +31,32 @@ builder.Services.AddCors(options =>
                             .AllowCredentials();
                       });
 });
+#region swagger
+    builder.Services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "EHR.API", Version = "v1" });
+        var securityScheme = new OpenApiSecurityScheme
+        {
+            Name = "JWT Authentication",
+            In = ParameterLocation.Header,
+            Type = SecuritySchemeType.Http,
+            Scheme = "bearer", // must be lower case
+            BearerFormat = "JWT",
+            Reference = new OpenApiReference
+            {
+                Id = JwtBearerDefaults.AuthenticationScheme,
+                Type = ReferenceType.SecurityScheme
+            }
+        };
+        c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement { { securityScheme, Array.Empty<string> () }
+                });
+        c.CustomSchemaIds(x => x.FullName);
+    });
+#endregion
 
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+IdentityModelEventSource.ShowPII = true;
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,8 +66,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

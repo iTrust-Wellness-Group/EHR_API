@@ -1,8 +1,9 @@
 ﻿using AWS;
 using AWS.SecrectManager;
+using EHR.Application.Contract.Identity;
 using EHR.Application.Contract.ReferralSystem.Office;
 using EHR.Database.Context;
-using EHR.Infrastructure.Repositories.Command;
+using EHR.Infrastructure.Repositories;
 using EHR.Infrastructure.Repositories.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,8 @@ namespace EHR.Infrastructure
 
             #region Repository
             services.AddScoped<IOfficeRepository, OfficeRepository>();
+            services.AddScoped<IIdentityRepository, IdentityRepository>();
+
             #endregion
             return services;
         }

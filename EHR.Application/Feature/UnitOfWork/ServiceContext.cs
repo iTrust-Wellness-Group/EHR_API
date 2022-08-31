@@ -1,4 +1,6 @@
-﻿using EHR.Application.Contract.ReferralSystem.Office;
+﻿using EHR.Application.Contract.Identity;
+using EHR.Application.Contract.ReferralSystem.Office;
+using EHR.Identity.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +14,13 @@ namespace EHR.Application.Feature.UnitOfWork
 
         public IOfficeRepository office { get; private set; }
 
-        public ServiceContext(IOfficeRepository office)
+        public IIdentityRepository identity { get; private set; }
+        public IJWTService jwtService { get; private set; }
+        public ServiceContext(IOfficeRepository office, IIdentityRepository identity, IJWTService jwtService)
         {
             this.office = office;
+            this.identity = identity;
+            this.jwtService = jwtService;
         }
 
     }
