@@ -32,27 +32,16 @@ namespace EHR.Identity
             })
             .AddJwtBearer(jwtOptions =>
             {
-                jwtOptions.Audience = "http://localhost:4200/";
-                jwtOptions.Authority = "http://localhost:5000/";
+               
                 jwtOptions.SaveToken = true;
                 jwtOptions.RequireHttpsMetadata = false;
                 jwtOptions.Configuration = new OpenIdConnectConfiguration();
                 jwtOptions.TokenValidationParameters = new TokenValidationParameters
                 {
-                //    ValidateIssuerSigningKey = true,
-                //    ValidateLifetime = true,
-                //    ValidateIssuer = true,
-                //    ValidIssuer = "Also My Issuer",    //Missing line here
-                //    ValidateAudience = true
-
-                    ValidateIssuer = true,
-                    ValidIssuer = "https://localhost:44339/",
+                    ValidateAudience = false,
+                    ValidateIssuer = false,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration.GetValue<string>("FrontendJwtTokenConfig:Secret"))),
-                    ValidAudiences = new List<string> {
-                        "https://localhost:7111/"
-                    },
-                    ValidateAudience = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration.GetValue<string>("BackendJwtTokenConfig:Secret"))),
                     ValidateLifetime = true,
                     ClockSkew = TimeSpan.FromMilliseconds(1)
                 };

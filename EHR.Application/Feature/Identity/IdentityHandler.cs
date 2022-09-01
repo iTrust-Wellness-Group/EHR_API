@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 
 namespace EHR.Application.Feature.Identity
 {
-    public class LoginHandler : BaseHandler, IRequestHandler<LoginModel, ResponseData<LoginResponseModel>>
+    public class IdentityHandler : BaseHandler, IRequestHandler<LoginModel, ResponseData<LoginResponseModel>>
     {
         IServiceContext service;
-        public LoginHandler(IServiceContext service)
+        public IdentityHandler(IServiceContext service)
         {
             this.service = service;
         }
