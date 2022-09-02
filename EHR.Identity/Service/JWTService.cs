@@ -70,7 +70,7 @@ namespace EHR.Identity.Service
                         ValidIssuer = _frontendJwtTokenConfig.Issuer,
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(_frontendSecret),// new SymmetricSecurityKey(_frontendSecret),
-                    ValidAudience = _frontendJwtTokenConfig.Audience,
+                        ValidAudience = _frontendJwtTokenConfig.Audience,
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ClockSkew = TimeSpan.Zero

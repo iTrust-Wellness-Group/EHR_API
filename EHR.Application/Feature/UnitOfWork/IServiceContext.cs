@@ -1,4 +1,5 @@
-﻿using EHR.Application.Contract.Identity;
+﻿using AutoMapper;
+using EHR.Application.Contract.Identity;
 using EHR.Application.Contract.ReferralSystem.Office;
 using EHR.Identity.Interface;
 using System;
@@ -11,6 +12,7 @@ namespace EHR.Application.Feature.UnitOfWork
 {
     public interface IServiceContext
     {
+        IMapper mapper { get; }
         IOfficeRepository office { get; }
         IIdentityRepository identity {get;}
         IJWTService jwtService { get; }

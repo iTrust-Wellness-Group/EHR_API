@@ -1,4 +1,5 @@
-﻿using EHR.Application.Contract.ReferralSystem.Office;
+﻿using AutoMapper;
+using EHR.Application.Contract.ReferralSystem.Office;
 using EHR.Application.Feature.ReferralSystem.Office.Models;
 using EHR.Application.Feature.UnitOfWork;
 using EHR.Application.Models;
@@ -23,12 +24,14 @@ namespace EHR.Application.Feature.ReferralSystem.Office.Query
         {
 
             var list = await this._serviceContext.office.GetAllAsync();
-            List<OfficeModel> response = list.Select(x => new OfficeModel
-            {
-                Id = x.Id,
-                Name = x.Name,
-            }).ToList();
-            var data = new ResponseData<List<OfficeModel>>(response);
+
+            //List<OfficeModel> response = list.Select(x => new OfficeModel
+            //{
+            //    Id = x.Id,
+            //    Name = x.Name,
+            //}).ToList();
+            var officeDTO = this._serviceContext.mapper.Map<List<OfficeModel>>(list);
+            var data = new ResponseData<List<OfficeModel>>(officeDTO);
             return await Task.FromResult(data);
         }
     }
