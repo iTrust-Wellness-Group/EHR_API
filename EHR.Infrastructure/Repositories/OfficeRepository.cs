@@ -40,7 +40,9 @@ namespace EHR.Infrastructure.Repositories.Query
 
         public List<OfficeModel> getOfficeList()
         {
-            return this.context.Offices.Select(x=> new OfficeModel { Id = x.Id,Name = x.Name}).ToList();
+            var list = this.context.Offices.Select(x => new OfficeModel { Id = x.Id, Name = x.Name }).ToList();
+
+            return list;
         }
 
         public List<OfficeModel> getOfficeList(string Name)

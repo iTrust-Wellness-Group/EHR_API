@@ -5,6 +5,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Net;
 using Microsoft.IdentityModel.Logging;
+using EHR.API.MiddleWare;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddControllers();
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -58,6 +60,7 @@ builder.Services.AddCors(options =>
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 IdentityModelEventSource.ShowPII = true;
 var app = builder.Build();
+app.UseMiddleware<RequestMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

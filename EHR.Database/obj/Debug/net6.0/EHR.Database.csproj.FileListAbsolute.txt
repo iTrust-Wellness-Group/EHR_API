@@ -1,0 +1,14 @@
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\bin\Debug\net6.0\EHR.Database.deps.json
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\bin\Debug\net6.0\EHR.Database.runtimeconfig.json
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\bin\Debug\net6.0\EHR.Database.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\bin\Debug\net6.0\EHR.Database.pdb
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.csproj.AssemblyReference.cache
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.AssemblyInfoInputs.cache
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.AssemblyInfo.cs
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.csproj.CoreCompileInputs.cache
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\refint\EHR.Database.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.pdb
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\EHR.Database.genruntimeconfig.cache
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net6.0\ref\EHR.Database.dll

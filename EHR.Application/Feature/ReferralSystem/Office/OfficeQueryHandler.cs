@@ -23,7 +23,7 @@ namespace EHR.Application.Feature.ReferralSystem.Office.Query
         public async Task<ResponseData<List<OfficeModel>>> Handle(OfficeSearchModel request, CancellationToken cancellationToken)
         {
 
-            var list = await this._serviceContext.office.GetAllAsync();
+            var list = this._serviceContext.office.getOfficeList();
 
             //List<OfficeModel> response = list.Select(x => new OfficeModel
             //{

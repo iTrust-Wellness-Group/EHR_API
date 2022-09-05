@@ -26,6 +26,7 @@ namespace EHR.Identity.Service
             _backendJwtTokenConfig = backendJwtTokenConfig;
             _backendSecret = Encoding.ASCII.GetBytes(_backendJwtTokenConfig.Secret);
         }
+        public JWTService() { }
 
         public string ReadClaimByExp(string token)
         {
