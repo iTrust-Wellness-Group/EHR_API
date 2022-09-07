@@ -17,6 +17,7 @@ namespace EHR.Identity.Interface
         public DateTime ReadClaimByDtExp(string token);
 
         public Claim[] ReadClaims(string token);
+        public string ReadClaim(string token, JWTClaimEnum key);
         public (ClaimsPrincipal, JwtSecurityToken) DecodeJwtToken(string token);
     }
 }

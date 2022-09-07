@@ -7,6 +7,7 @@ namespace EHR.Database.Entities
     {
         public Account()
         {
+            AccessLogs = new HashSet<AccessLog>();
             AccountPermissionMaps = new HashSet<AccountPermissionMap>();
             AccountProfiles = new HashSet<AccountProfile>();
             AccountRoleMaps = new HashSet<AccountRoleMap>();
@@ -22,6 +23,7 @@ namespace EHR.Database.Entities
         public DateTime? CreateTime { get; set; }
         public bool? IsDelete { get; set; }
 
+        public virtual ICollection<AccessLog> AccessLogs { get; set; }
         public virtual ICollection<AccountPermissionMap> AccountPermissionMaps { get; set; }
         public virtual ICollection<AccountProfile> AccountProfiles { get; set; }
         public virtual ICollection<AccountRoleMap> AccountRoleMaps { get; set; }

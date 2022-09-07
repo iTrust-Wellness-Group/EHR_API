@@ -23,7 +23,7 @@ namespace EHR.Application.Feature.Identity
         {
             var claims = new Claim[]
             {
-                new Claim("UserId", "123"),
+                new Claim("UserId", "65be07fd-5bbd-4838-ba36-625caf3380c6"),
                 new Claim("Name","Leo"),
                 new Claim("Email", "LeoChou@gmail.com"),
                 new Claim("MobilePhone","09123456789"),

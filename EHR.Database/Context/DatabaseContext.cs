@@ -17,6 +17,7 @@ namespace EHR.Database.Context
         {
         }
 
+        public virtual DbSet<AccessLog> AccessLogs { get; set; } = null!;
         public virtual DbSet<Account> Accounts { get; set; } = null!;
         public virtual DbSet<AccountPermissionMap> AccountPermissionMaps { get; set; } = null!;
         public virtual DbSet<AccountProfile> AccountProfiles { get; set; } = null!;
@@ -33,7 +34,11 @@ namespace EHR.Database.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseNpgsql("Host=aurora-auroradatabase5475d328-1fhhlc5ey771i.cluster-csgv9gisrp7z.us-east-2.rds.amazonaws.com:48040;Database=development;Username=cluster_root;Password=M^us{Ovk]]K+#I=LE3w(UpfeBD?0-7Rn");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,6 +47,50 @@ namespace EHR.Database.Context
                 .HasPostgresEnum("status", new[] { "FAILED", "SUCCEEDED", "SKIPPED" })
                 .HasPostgresEnum("type", new[] { "PROFILE", "CLINICAL_NOTE", "DOCUMENT", "SKIPPED", "PATIENT" })
                 .HasPostgresExtension("uuid-ossp");
+
+            modelBuilder.Entity<AccessLog>(entity =>
+            {
+                entity.ToTable("AccessLog");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .HasDefaultValueSql("uuid_generate_v4()");
+
+                entity.Property(e => e.Action)
+                    .HasColumnType("character varying")
+                    .HasColumnName("action");
+
+                entity.Property(e => e.ActionName)
+                    .HasColumnType("character varying")
+                    .HasColumnName("actionName");
+
+                entity.Property(e => e.ControllerName)
+                    .HasColumnType("character varying")
+                    .HasColumnName("controllerName");
+
+                entity.Property(e => e.CreateTime)
+                    .HasColumnName("createTime")
+                    .HasDefaultValueSql("statement_timestamp()");
+
+                entity.Property(e => e.IsDelete)
+                    .HasColumnName("isDelete")
+                    .HasDefaultValueSql("false");
+
+                entity.Property(e => e.ModifyUserId).HasColumnName("modifyUserId");
+
+                entity.Property(e => e.OrignData)
+                    .HasColumnType("character varying")
+                    .HasColumnName("orignData");
+
+                entity.Property(e => e.UpdateData)
+                    .HasColumnType("character varying")
+                    .HasColumnName("updateData");
+
+                entity.HasOne(d => d.ModifyUser)
+                    .WithMany(p => p.AccessLogs)
+                    .HasForeignKey(d => d.ModifyUserId)
+                    .HasConstraintName("AccessLog_modifyUserId_fkey");
+            });
 
             modelBuilder.Entity<Account>(entity =>
             {

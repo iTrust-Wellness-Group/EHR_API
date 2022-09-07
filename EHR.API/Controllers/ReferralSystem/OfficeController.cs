@@ -20,9 +20,8 @@ namespace EHR.API.Controllers.ReferralSystem
             _mediator = mediator;
         }
 
-        [HttpGet("Office/{Name}")]
-       // [Authorize]
-       // [Authentication(JWTUserRolesEnum.Admin,JWTUserRolesEnum.User)]
+        [HttpGet("Office")]
+        [Authentication(JWTUserRolesEnum.Admin, JWTUserRolesEnum.User)]
         public async Task<IActionResult> GetOffice(String Name)
         {
             var res = await _mediator.Send(new OfficeSearchModel() { Name = Name });

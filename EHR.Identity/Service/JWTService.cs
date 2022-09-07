@@ -30,6 +30,8 @@ namespace EHR.Identity.Service
 
         public string ReadClaimByExp(string token)
         {
+            if (token.Contains("Bearer"))
+                token =token.Split(' ')[1];
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
             var s = jwtSecurityToken.Claims.First(claim => claim.Type == "exp").Value;
@@ -39,6 +41,8 @@ namespace EHR.Identity.Service
         }
         public DateTime ReadClaimByDtExp(string token)
         {
+            if (token.Contains("Bearer"))
+                token = token.Split(' ')[1];
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
             var s = jwtSecurityToken.Claims.First(claim => claim.Type == "exp").Value;
@@ -49,6 +53,8 @@ namespace EHR.Identity.Service
 
         public Claim[] ReadClaims(string token)
         {
+            if (token.Contains("Bearer"))
+                token = token.Split(' ')[1];
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
             var result = jwtSecurityToken.Claims.ToArray();
@@ -62,6 +68,8 @@ namespace EHR.Identity.Service
             {
                 throw new SecurityTokenException("Invalid token");
             }
+            if (token.Contains("Bearer"))
+                token = token.Split(' ')[1];
 
             var principal = new JwtSecurityTokenHandler()
                 .ValidateToken(token,
@@ -126,5 +134,15 @@ namespace EHR.Identity.Service
             return jwtToken;
         }
 
+        public String ReadClaim(string token, JWTClaimEnum key)
+        {
+            if (token.Contains("Bearer"))
+                token = token.Split(' ')[1];
+            String name = key.ToString();
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(token);
+            String value = jwtSecurityToken.Claims.First(claim => claim.Type == name).Value;
+            return value;
+        }
     }
 }
