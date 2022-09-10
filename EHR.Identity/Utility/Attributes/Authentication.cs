@@ -17,23 +17,23 @@ namespace EHR.Identity.Utility.Attributes
         public Authentication(params JWTUserRolesEnum[] roles) {
             this.roles = roles;
         }
-      
+
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            JWTService service = new JWTService();
+            IJWTService service = new JWTService();
 
             String token = context.HttpContext.Request.Headers.Authorization.ToString().Split(' ')[1];
-           
+
             var claims = service.ReadClaims(token);
-            foreach(var claim in claims)
+            foreach (var claim in claims)
             {
-                switch(claim.Type)
+                switch (claim.Type)
                 {
                     case "Role":
                         break;
                 }
             }
-           
+
         }
     }
 }

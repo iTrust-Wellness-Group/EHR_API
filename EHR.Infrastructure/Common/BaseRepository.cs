@@ -4,21 +4,24 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-
+using Dapper;
 namespace EHR.Infrastructure.Repositories.Command
 {
     public class BaseRepository<TEntity> : IBaseCommandRepository<TEntity>
      where TEntity : class
     {
         protected readonly DatabaseContext CommandContext;
-
-        public BaseRepository(DatabaseContext commandContext)
+        protected readonly IDbConnection QueryContext;
+        public BaseRepository(DatabaseContext commandContext, IDbConnection queryContext)
         {
             CommandContext = commandContext;
+            QueryContext = queryContext;
+            
         }
         public IDbContextTransaction BeginTransaction()
         {

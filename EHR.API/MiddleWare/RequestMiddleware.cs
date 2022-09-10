@@ -23,13 +23,10 @@ namespace EHR.API.MiddleWare
         public async Task Invoke(HttpContext context,IJWTService service,DatabaseContext dbcontext)
         {
 
-            var queryPath = context.Request.Path.Value;
-            if (!queryPath.Contains("swagger"))
-            {
+           
 
                 // makesure HTTP Request can be read more
                 context.Request.EnableBuffering();
-
                 // read HTTP Request Body 
                 // set  leaveOpen = true. When StreamReader is close,HTTP Request Stream won't close together
                 using (var bodyReader = new StreamReader(stream: context.Request.Body,
@@ -79,15 +76,10 @@ namespace EHR.API.MiddleWare
 
                 // set HTTP Request Stream position = 0 , let can be read again
                 context.Request.Body.Position = 0;
-
+               
                 await _next.Invoke(context);
-
             }
-            else
-            {
-                await _next(context);
-            }
-
+        
 
         }
     }

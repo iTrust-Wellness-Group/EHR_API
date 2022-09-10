@@ -7,6 +7,7 @@ using EHR.Database.Entities;
 using EHR.Infrastructure.Repositories.Command;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,10 @@ namespace EHR.Infrastructure.Repositories.Query
     internal class OfficeRepository : BaseRepository<Office>, IOfficeRepository
     {
         private DatabaseContext context;
-        public OfficeRepository(DatabaseContext context):base(context)
+        private IDbConnection queryContext;
+        public OfficeRepository(DatabaseContext commandContext, IDbConnection queryContext) : base(commandContext, queryContext)
         {
-            this.context = context;
+            this.queryContext = queryContext;
         }
 
         public async Task<bool> createOffice(string Name)

@@ -60,7 +60,6 @@ builder.Services.AddCors(options =>
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 IdentityModelEventSource.ShowPII = true;
 var app = builder.Build();
-app.UseMiddleware<RequestMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -71,6 +70,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<RequestMiddleware>();
 app.MapControllers();
 
 app.Run();
