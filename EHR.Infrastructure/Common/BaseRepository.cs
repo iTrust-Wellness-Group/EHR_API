@@ -21,7 +21,6 @@ namespace EHR.Infrastructure.Repositories.Command
         {
             CommandContext = commandContext;
             QueryContext = queryContext;
-            
         }
         public IDbContextTransaction BeginTransaction()
         {

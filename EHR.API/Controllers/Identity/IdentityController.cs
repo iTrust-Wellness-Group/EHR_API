@@ -24,5 +24,13 @@ namespace EHR.API.Controllers.Identity
             var result = await this._mediator.Send(req);
             return Ok(result);
         }
+
+        [HttpPost("refresh")]
+        [AllowAnonymous]
+        public async Task<IActionResult> refresh(RefreshModel req)
+        {
+            var result = await this._mediator.Send(req);
+            return Ok(result);
+        }
     }
 }

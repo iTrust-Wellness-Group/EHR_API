@@ -1,5 +1,6 @@
 ﻿using EHR.Application.Feature.Identity.Models;
 using EHR.Application.Models;
+using EHR.Database.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,9 @@ namespace EHR.Application.Contract.Identity
     {
 
         #region 基本系統登入
-        public Task<ResponseData<LoginResponseModel>> LoginAsync(LoginModel req);
+        public Task<Account> LoginAsync(LoginModel req);
+        public bool RefreshTokenAsync(RefreshModel req);
+        public bool RevokeToken(RefreshModel req);
         #endregion
 
         #region 第三方登入

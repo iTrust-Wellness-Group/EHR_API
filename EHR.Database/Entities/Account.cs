@@ -16,7 +16,7 @@ namespace EHR.Database.Entities
         public Guid Id { get; set; }
         public string? StaffAccount { get; set; }
         public string? Password { get; set; }
-        public DateTime? RefreshToken { get; set; }
+        public Guid? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiry { get; set; }
         public string? ActiveToken { get; set; }
         public int? Status { get; set; }

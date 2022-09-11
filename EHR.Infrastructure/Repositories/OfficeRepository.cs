@@ -20,7 +20,9 @@ namespace EHR.Infrastructure.Repositories.Query
         private IDbConnection queryContext;
         public OfficeRepository(DatabaseContext commandContext, IDbConnection queryContext) : base(commandContext, queryContext)
         {
+            this.context = commandContext;
             this.queryContext = queryContext;
+
         }
 
         public async Task<bool> createOffice(string Name)

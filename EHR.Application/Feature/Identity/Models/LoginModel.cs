@@ -13,4 +13,11 @@ namespace EHR.Application.Feature.Identity.Models
         public string Account { get; set; }
         public string Password { get; set; }
     }
+
+    public class RefreshModel : IRequest<ResponseData<LoginResponseModel>>
+    {
+        public Guid UserID { get; set; }
+        public Guid RefreshToken { get; set; }
+
+    }
 }

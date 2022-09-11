@@ -36,7 +36,7 @@ namespace EHR.Application.Feature.Identity
             var response = new LoginResponseModel()
             {
                 Token = token,
-                RefreshToken = "123"
+                RefreshToken = "9472e6a1-b91e-408c-bca9-8a149c3738e4"
             };
             var data = new ResponseData<LoginResponseModel>(response);
             return await Task.FromResult(data);
