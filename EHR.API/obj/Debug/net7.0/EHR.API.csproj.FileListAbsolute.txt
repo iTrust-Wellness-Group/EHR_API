@@ -73,3 +73,6 @@ C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\EHR.API.pdb
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\EHR.API.genruntimeconfig.cache
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\ref\EHR.API.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\bin\Debug\net7.0\System.CodeDom.dll
