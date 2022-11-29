@@ -2748,23 +2748,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\alex\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Identity\\EHR.Identity.csproj",
+      "projectUniqueName": "D:\\iTrust-Wellness-Group\\EHR_API\\EHR.Identity\\EHR.Identity.csproj",
       "projectName": "EHR.Identity",
-      "projectPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Identity\\EHR.Identity.csproj",
-      "packagesPath": "C:\\Users\\leo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Identity\\obj\\",
+      "projectPath": "D:\\iTrust-Wellness-Group\\EHR_API\\EHR.Identity\\EHR.Identity.csproj",
+      "packagesPath": "C:\\Users\\alex\\.nuget\\packages\\",
+      "outputPath": "D:\\iTrust-Wellness-Group\\EHR_API\\EHR.Identity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2773,15 +2773,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\Library\\AWS": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj": {
-              "projectPath": "C:\\Users\\leo\\Desktop\\ITrust-Wellness-Group工作專案專案\\EHR.API\\EHR.Database\\EHR.Database.csproj"
+            "D:\\iTrust-Wellness-Group\\EHR_API\\EHR.Database\\EHR.Database.csproj": {
+              "projectPath": "D:\\iTrust-Wellness-Group\\EHR_API\\EHR.Database\\EHR.Database.csproj"
             }
           }
         }
@@ -2824,26 +2823,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.7, 6.0.7]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.7, 6.0.7]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.7, 6.0.7]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.7.22377.5\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
