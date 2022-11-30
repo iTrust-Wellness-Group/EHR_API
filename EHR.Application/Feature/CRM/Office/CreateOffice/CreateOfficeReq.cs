@@ -6,15 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EHR.Application.Feature.ReferralSystem.Office.Models
+namespace EHR.Application.Feature.CRM.Office.CreateOffice
 {
-    public class OfficeSearchModel : IRequest<ResponseData<List<OfficeModel>>>
-    {
-        public String Name { get; set; }
-
-    }
-    // responseModel also can be share with create/update
-    public class OfficeModel : IRequest<Response>
+    public class CreateOfficeReq : IRequest<Response>
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = null!;
@@ -24,5 +18,4 @@ namespace EHR.Application.Feature.ReferralSystem.Office.Models
         public string? ZipCode { get; set; }
         public bool? IsDelete { get; set; }
     }
-    
 }

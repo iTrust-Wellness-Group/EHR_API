@@ -1,4 +1,4 @@
-﻿using EHR.Application.Contract.ReferralSystem.Office;
+﻿using EHR.Application.Contract.CRM.Office;
 using EHR.Application.Feature.ReferralSystem.Office.Models;
 using EHR.Application.Feature.UnitOfWork;
 using EHR.Application.Models;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EHR.Application.Feature.ReferralSystem.Office.Command
+namespace EHR.Application.Feature.CRM.Office.CreateOffice
 {
     internal class OfficeCreateHandler : BaseHandler, IRequestHandler<OfficeModel, Response>
     {

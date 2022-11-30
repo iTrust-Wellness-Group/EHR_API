@@ -1,7 +1,5 @@
-﻿
-using EHR.Application.Contract.ReferralSystem.Office;
-using EHR.Application.Feature.ReferralSystem.Office.Models;
-using EHR.Application.Feature.ReferralSystem.Office.Query;
+﻿using EHR.Application.Contract.CRM.Office;
+using EHR.Application.Feature.CRM.Office.QueryOffice;
 using EHR.Database.Context;
 using EHR.Database.Entities;
 using EHR.Infrastructure.Repositories.Command;
@@ -11,6 +9,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace EHR.Infrastructure.Repositories.Query
 {
@@ -42,16 +41,15 @@ namespace EHR.Infrastructure.Repositories.Query
             }
         }
 
-        public List<OfficeModel> getOfficeList()
+        public QueryOfficeRes getOffice(string Name)
         {
-            var list = this.context.Offices.Select(x => new OfficeModel { Id = x.Id, Name = x.Name }).ToList();
-
-            return list;
+            return this.context.Offices.Select(x => new QueryOfficeRes { Id = x.Id, Name = x.Name }).Where(x=>x.Name.Contains(Name)).FirstOrDefault();
         }
 
-        public List<OfficeModel> getOfficeList(string Name)
+        public List<QueryOfficeRes> getOfficeList()
         {
-            return this.context.Offices.Select(x => new OfficeModel { Id = x.Id, Name = x.Name }).Where(x=>x.Name.Contains(Name)).ToList();
+            return this.context.Offices.Select(x => new QueryOfficeRes { Id = x.Id, Name = x.Name }).ToList();
         }
+
     }
 }
