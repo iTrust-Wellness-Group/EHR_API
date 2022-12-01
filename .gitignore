@@ -1,0 +1,8 @@
+*.vsidx
+EHR.API/obj/*.*
+EHR.Application/obj/*.*
+EHR.Database/obj/*.*
+EHR.Identity/obj/*.*
+EHR.Infrastructure/obj/*.*
+EHR.Shared/obj/*.*
+.vs/EHR.API/v17/*.*
