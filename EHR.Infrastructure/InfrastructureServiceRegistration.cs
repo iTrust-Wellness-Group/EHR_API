@@ -1,7 +1,7 @@
 ﻿using AWS;
 using AWS.SecrectManager;
 using EHR.Application.Contract.Identity;
-using EHR.Application.Contract.ReferralSystem.Office;
+using EHR.Application.Contract.CRM.Office;
 using EHR.Database.Context;
 using EHR.Infrastructure.Repositories;
 using EHR.Infrastructure.Repositories.Query;

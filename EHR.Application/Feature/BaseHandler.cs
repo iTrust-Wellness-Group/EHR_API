@@ -1,4 +1,4 @@
-﻿using EHR.Application.Contract.ReferralSystem.Office;
+﻿using EHR.Application.Contract.CRM.Office;
 using System;
 using System.Collections.Generic;
 using System.Linq;
