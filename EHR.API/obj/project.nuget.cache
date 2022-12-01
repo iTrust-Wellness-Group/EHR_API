@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "wjRdIuSlYJ8etSdCXjFM/0zTlMKEcykw5JgtyWeooN55XYFuk4KVi5gt/T7fSD5SlbJcY2WvHy5lujL5vkfkLQ==",
-  "success": false,
+  "dgSpecHash": "NdNgUUATqOKYI9d+U9rZChUT7Cvj8yEZ68udVD7bHCGlllmOD3jDTdOQLrPLVnhapM4CGT9U3KkxO8ERqEOhWg==",
+  "success": true,
   "projectFilePath": "D:\\iTrust-Wellness-Group\\EHR_API\\EHR.API\\EHR.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alex\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\aws\\1.0.0\\aws.1.0.0.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\awssdk.core\\3.7.12.24\\awssdk.core.3.7.12.24.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\awssdk.s3\\3.7.9.42\\awssdk.s3.3.7.9.42.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\awssdk.secretsmanager\\3.7.2.80\\awssdk.secretsmanager.3.7.2.80.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\awssdk.secretsmanager.caching\\1.0.4\\awssdk.secretsmanager.caching.1.0.4.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
@@ -48,6 +53,7 @@
     "C:\\Users\\alex\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\npgsql\\6.0.6\\npgsql.6.0.6.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.6\\npgsql.entityframeworkcore.postgresql.6.0.6.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql.design\\1.1.0\\npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512",
@@ -69,15 +75,5 @@
     "C:\\Users\\alex\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\alex\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "找不到套件 AWS。在來源中不存在此識別碼的套件: Microsoft Visual Studio Offline Packages, nuget.org",
-      "libraryId": "AWS",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }
