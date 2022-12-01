@@ -21,7 +21,7 @@ namespace EHR.Application.Feature.CRM.Office.QueryOffice
 
         public async Task<ResponseData<List<QueryOfficeRes>>> Handle(QueryOfficeReq request, CancellationToken cancellationToken)
         {
-
+            
             var list = _serviceContext.office.getOfficeList();
 
   

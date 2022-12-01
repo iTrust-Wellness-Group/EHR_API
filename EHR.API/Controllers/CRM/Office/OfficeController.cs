@@ -1,6 +1,7 @@
 ﻿using EHR.API.Controllers.Base;
 using EHR.Application.Feature.CRM.Office.CreateOffice;
 using EHR.Application.Feature.CRM.Office.QueryOffice;
+using EHR.Application.Feature.CRM.Office.UpdateOffice;
 using EHR.Identity.Models;
 using EHR.Identity.Utility.Attributes;
 using MediatR;
@@ -28,6 +29,13 @@ namespace EHR.API.Controllers.CRM.Office
         }
         [HttpPost("Office")]
         public async Task<IActionResult> CreateOffice(CreateOfficeReq request)
+        {
+            var res = await _mediator.Send(request);
+            return Ok(res);
+        }
+
+        [HttpPost("UpdateOffice")]
+        public async Task<IActionResult> CreateOffice(UpdateOfficeReq request)
         {
             var res = await _mediator.Send(request);
             return Ok(res);

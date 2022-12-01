@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using EHR.Application.Contract.Identity;
-using EHR.Application.Contract.ReferralSystem.Office;
+using EHR.Application.Contract.CRM.Office;
 using EHR.Identity.Interface;
 using System;
 using System.Collections.Generic;

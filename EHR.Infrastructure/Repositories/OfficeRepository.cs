@@ -1,5 +1,7 @@
-﻿using EHR.Application.Contract.CRM.Office;
+﻿using Dapper;
+using EHR.Application.Contract.CRM.Office;
 using EHR.Application.Feature.CRM.Office.QueryOffice;
+using EHR.Application.Feature.CRM.Office.UpdateOffice;
 using EHR.Database.Context;
 using EHR.Database.Entities;
 using EHR.Infrastructure.Repositories.Command;
@@ -41,7 +43,7 @@ namespace EHR.Infrastructure.Repositories.Query
             }
         }
 
-        public QueryOfficeRes getOffice(string Name)
+        public QueryOfficeRes? getOffice(string Name)
         {
             return this.context.Offices.Select(x => new QueryOfficeRes { Id = x.Id, Name = x.Name }).Where(x=>x.Name.Contains(Name)).FirstOrDefault();
         }
@@ -51,5 +53,9 @@ namespace EHR.Infrastructure.Repositories.Query
             return this.context.Offices.Select(x => new QueryOfficeRes { Id = x.Id, Name = x.Name }).ToList();
         }
 
+        public async Task<bool> updateOffice(UpdateOfficeReq office)
+        {
+            return true;
+        }
     }
 }
