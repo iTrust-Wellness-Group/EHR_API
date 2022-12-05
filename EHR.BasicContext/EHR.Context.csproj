@@ -16,4 +16,10 @@
     <ProjectReference Include="..\EHR.Shared\EHR.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="CRM\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CRM\" />
+  </ItemGroup>
 </Project>

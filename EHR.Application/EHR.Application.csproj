@@ -22,4 +22,12 @@
     <ProjectReference Include="..\EHR.Identity\EHR.Identity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Feature\CRM\Lead\" />
+    <None Remove="Feature\CRM\Lead\GetLeads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Feature\CRM\Lead\" />
+    <Folder Include="Feature\CRM\Lead\GetLeads\" />
+  </ItemGroup>
 </Project>

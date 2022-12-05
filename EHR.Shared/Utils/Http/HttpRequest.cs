@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Net.Http;
-
 namespace EHR.Shared.Utils.Http
 {
     public class HttpRequest : IHttpRequest, IDisposable
@@ -18,8 +17,9 @@ namespace EHR.Shared.Utils.Http
         private HttpClientHandler? _httpClientHandler;
         private string _baseUrl = "";
         private string _token = "";
+        private string _secretKey = "";
         private const string MediaTypeJson = "application/json";
-
+     
         public string BaseUrl
         {
             set
@@ -34,6 +34,14 @@ namespace EHR.Shared.Utils.Http
                 this._token = value;
             }
         }
+        public string SecretKey
+        {
+            set
+            {
+                this._secretKey = value;
+            }
+        }
+        public string Credential { get; set; }
 
         public async Task<string> PostAsync(string url, object input)
         {
@@ -131,7 +139,16 @@ namespace EHR.Shared.Utils.Http
             }
 
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(MediaTypeJson));
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
+            switch(this.Credential)
+            {
+                case "drchronoAccessToken":
+                    _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
+                    break;
+                case "leadsquaredAccessToken":
+                    _httpClient.DefaultRequestHeaders.Add("x-LSQ-AccessKey", _token);
+                    _httpClient.DefaultRequestHeaders.Add("x-LSQ-SecretKey", _secretKey);
+                    break;
+            }
         }
 
         private void EnsureHttpClientCreated()

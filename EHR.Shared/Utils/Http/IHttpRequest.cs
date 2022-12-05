@@ -17,5 +17,7 @@ namespace EHR.Shared.Utils.Http
         public Task<string> DeleteAsync(string url);
         public String BaseUrl { set; }
         public String Token { set; }
+        public String SecretKey { set; }
+        public String Credential { set; }
     }
 }

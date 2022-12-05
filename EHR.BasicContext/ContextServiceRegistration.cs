@@ -1,4 +1,5 @@
-﻿using EHR.Context.Drchrono;
+﻿using EHR.Context.CRM;
+using EHR.Context.Drchrono;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -16,6 +17,8 @@ namespace EHR.Context
         public static IServiceCollection AddContextServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<DrchronoContext>();
+            services.AddScoped<CRMContext>();
+
             return services;
         }
     }

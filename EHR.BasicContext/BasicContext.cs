@@ -17,7 +17,10 @@ namespace EHR.Context
             if (_expiretime == null || DateTime.Now.Date > _expiretime.Value.Date)
             {
                 ContextCredential contextCredential = this.GetCredentialByType(credential);
-                _expiretime = this.UnixTimeStampToDateTime(double.Parse(contextCredential.Expire));
+                if(!String.IsNullOrEmpty(contextCredential.Expire))
+                {
+                    _expiretime = this.UnixTimeStampToDateTime(double.Parse(contextCredential.Expire));
+                }
 
             }
         }
@@ -25,7 +28,9 @@ namespace EHR.Context
         public ContextCredential GetCredentialByType(Credential credential)
         {
             var contextCredential = SecretsManager.GetSecret<ContextCredential>(credential.ToString())!;
+            this._httpRequest.Credential = credential.ToString();
             this._httpRequest.Token = contextCredential.AccessToken;
+            this._httpRequest.SecretKey = contextCredential.SecretKey;
             return contextCredential;
         }
 
