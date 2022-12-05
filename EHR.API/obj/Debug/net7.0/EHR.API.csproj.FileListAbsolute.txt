@@ -57,7 +57,6 @@ C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\EHR.API.AssemblyInfoInputs.cache
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\EHR.API.AssemblyInfo.cs
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\EHR.API.csproj.CoreCompileInputs.cache
-C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\EHR.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\EHR.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\staticwebassets\msbuild.EHR.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.API\obj\Debug\net7.0\staticwebassets\msbuild.build.EHR.API.props
@@ -154,3 +153,7 @@ D:\iTrust-Wellness-Group\EHR_API\EHR.API\obj\Debug\net7.0\refint\EHR.API.dll
 D:\iTrust-Wellness-Group\EHR_API\EHR.API\obj\Debug\net7.0\EHR.API.pdb
 D:\iTrust-Wellness-Group\EHR_API\EHR.API\obj\Debug\net7.0\EHR.API.genruntimeconfig.cache
 D:\iTrust-Wellness-Group\EHR_API\EHR.API\obj\Debug\net7.0\ref\EHR.API.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.API\bin\Debug\net7.0\EHR.Context.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.API\bin\Debug\net7.0\EHR.Shared.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.API\bin\Debug\net7.0\EHR.Context.pdb
+D:\iTrust-Wellness-Group\EHR_API\EHR.API\bin\Debug\net7.0\EHR.Shared.pdb

@@ -32,3 +32,7 @@ D:\iTrust-Wellness-Group\EHR_API\EHR.Application\obj\Debug\net7.0\EHR.Applicatio
 D:\iTrust-Wellness-Group\EHR_API\EHR.Application\obj\Debug\net7.0\refint\EHR.Application.dll
 D:\iTrust-Wellness-Group\EHR_API\EHR.Application\obj\Debug\net7.0\EHR.Application.pdb
 D:\iTrust-Wellness-Group\EHR_API\EHR.Application\obj\Debug\net7.0\ref\EHR.Application.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.Application\bin\Debug\net7.0\EHR.Context.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.Application\bin\Debug\net7.0\EHR.Shared.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.Application\bin\Debug\net7.0\EHR.Context.pdb
+D:\iTrust-Wellness-Group\EHR_API\EHR.Application\bin\Debug\net7.0\EHR.Shared.pdb

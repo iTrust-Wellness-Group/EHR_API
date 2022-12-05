@@ -10,9 +10,11 @@
         "dependencies": {
           "Dapper": "2.0.123",
           "EHR.Application": "1.0.0",
+          "EHR.Context": "1.0.0",
           "EHR.Database": "1.0.0",
           "EHR.Identity": "1.0.0",
           "EHR.Infrastructure": "1.0.0",
+          "EHR.Shared": "1.0.0",
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
@@ -622,6 +624,7 @@
         "dependencies": {
           "AutoMapper": "12.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "EHR.Context": "1.0.0",
           "EHR.Database": "1.0.0",
           "EHR.Identity": "1.0.0",
           "MediatR": "11.1.0",
@@ -632,6 +635,17 @@
         },
         "runtime": {
           "EHR.Application.dll": {}
+        }
+      },
+      "EHR.Context/1.0.0": {
+        "dependencies": {
+          "AWS": "1.0.0",
+          "EHR.Shared": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "EHR.Context.dll": {}
         }
       },
       "EHR.Database/1.0.0": {
@@ -668,6 +682,16 @@
         },
         "runtime": {
           "EHR.Infrastructure.dll": {}
+        }
+      },
+      "EHR.Shared/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "EHR.Shared.dll": {}
         }
       }
     }
@@ -1201,6 +1225,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "EHR.Context/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "EHR.Database/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1212,6 +1241,11 @@
       "sha512": ""
     },
     "EHR.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EHR.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
