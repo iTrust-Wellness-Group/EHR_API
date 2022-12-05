@@ -21,4 +21,8 @@
     <ProjectReference Include="..\EHR.Identity\EHR.Identity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contract\DrChrono\" />
+  </ItemGroup>
+
 </Project>

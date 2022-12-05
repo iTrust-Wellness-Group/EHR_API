@@ -12,3 +12,17 @@ C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Databas
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net7.0\EHR.Database.pdb
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net7.0\EHR.Database.genruntimeconfig.cache
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Database\obj\Debug\net7.0\ref\EHR.Database.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\bin\Debug\net7.0\EHR.Database.deps.json
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\bin\Debug\net7.0\EHR.Database.runtimeconfig.json
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\bin\Debug\net7.0\EHR.Database.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\bin\Debug\net7.0\EHR.Database.pdb
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.csproj.AssemblyReference.cache
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.GeneratedMSBuildEditorConfig.editorconfig
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.AssemblyInfoInputs.cache
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.AssemblyInfo.cs
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.csproj.CoreCompileInputs.cache
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\refint\EHR.Database.dll
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.pdb
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\EHR.Database.genruntimeconfig.cache
+D:\iTrust-Wellness-Group\EHR_API\EHR.Database\obj\Debug\net7.0\ref\EHR.Database.dll

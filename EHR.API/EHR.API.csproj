@@ -24,4 +24,8 @@
     <ProjectReference Include="..\EHR.Infrastructure\EHR.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\DrChrono\" />
+  </ItemGroup>
+
 </Project>
