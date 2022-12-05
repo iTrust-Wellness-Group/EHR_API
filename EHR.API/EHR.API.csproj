@@ -19,9 +19,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EHR.Application\EHR.Application.csproj" />
+    <ProjectReference Include="..\EHR.BasicContext\EHR.Context.csproj" />
     <ProjectReference Include="..\EHR.Database\EHR.Database.csproj" />
     <ProjectReference Include="..\EHR.Identity\EHR.Identity.csproj" />
     <ProjectReference Include="..\EHR.Infrastructure\EHR.Infrastructure.csproj" />
+    <ProjectReference Include="..\EHR.Shared\EHR.Shared.csproj" />
   </ItemGroup>
 
 </Project>

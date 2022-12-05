@@ -4,6 +4,7 @@ using EHR.Application.Feature.CRM.Office.QueryOffice;
 using EHR.Application.Feature.CRM.Office.UpdateOffice;
 using EHR.Identity.Models;
 using EHR.Identity.Utility.Attributes;
+using EHR.Shared.Utils.Http;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

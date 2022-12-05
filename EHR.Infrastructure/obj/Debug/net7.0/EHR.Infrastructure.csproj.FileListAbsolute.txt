@@ -19,3 +19,7 @@ C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrast
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrastructure\obj\Debug\net7.0\EHR.Infrastructure.pdb
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrastructure\obj\Debug\net7.0\EHR.Infrastructure.genruntimeconfig.cache
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrastructure\obj\Debug\net7.0\ref\EHR.Infrastructure.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrastructure\bin\Debug\net7.0\EHR.Context.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrastructure\bin\Debug\net7.0\EHR.Shared.dll
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrastructure\bin\Debug\net7.0\EHR.Context.pdb
+C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Infrastructure\bin\Debug\net7.0\EHR.Shared.pdb
