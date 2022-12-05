@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EHR.Application.Feature.Drchrono.createPatient
+namespace EHR.Application.Feature.Drchrono.CreatePatient
 {
     public class CreatePatientHandler : BaseHandler, IRequestHandler<CreatePatientReq, ResponseData<CreatePatientRes>>
     {

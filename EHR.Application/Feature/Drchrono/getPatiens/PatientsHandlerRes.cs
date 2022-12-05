@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EHR.Application.Feature.Drchrono.getPatiens
+namespace EHR.Application.Feature.Drchrono.GetPatiens
 {
     public class PatientsHandlerRes
     {

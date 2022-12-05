@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace EHR.Application.Feature.Drchrono.getPatiens
+namespace EHR.Application.Feature.Drchrono.GetPatiens
 {
     public class PatientsHandler : BaseHandler, IRequestHandler<PatientsHandlerReq, ResponseData<PatientsHandlerRes>>
     {

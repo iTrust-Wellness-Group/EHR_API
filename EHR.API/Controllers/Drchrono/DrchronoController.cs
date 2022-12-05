@@ -1,7 +1,7 @@
 ﻿using EHR.API.Controllers.Base;
 using EHR.Application.Feature.CRM.Office.QueryOffice;
-using EHR.Application.Feature.Drchrono.createPatient;
-using EHR.Application.Feature.Drchrono.getPatiens;
+using EHR.Application.Feature.Drchrono.CreatePatient;
+using EHR.Application.Feature.Drchrono.GetPatiens;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -20,7 +20,6 @@ namespace EHR.API.Controllers.Drchrono
             _mediator = mediator;
         }
         [HttpGet("patients")]
-        [AllowAnonymous]
         public async Task<IActionResult> GetPatients()
         {
             var res = await _mediator.Send(new PatientsHandlerReq());
@@ -28,7 +27,6 @@ namespace EHR.API.Controllers.Drchrono
         }
 
         [HttpPost("patients")]
-        [AllowAnonymous]
         public async Task<IActionResult> CreatePatient(CreatePatientReq req)
         {
             var res = await _mediator.Send(req);
