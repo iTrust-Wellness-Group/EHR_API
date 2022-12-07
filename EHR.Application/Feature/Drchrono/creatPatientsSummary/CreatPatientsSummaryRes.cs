@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EHR.Application.Feature.Drchrono.getPatients
+namespace EHR.Application.Feature.Drchrono.creatPatientsSummary
 {
-    public class PatientsHandlerReq
+    public class CreatPatientsSummaryRes
     {
+
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EHR.Application.Feature.Drchrono.getPatients
+namespace EHR.Application.Feature.Drchrono.updatePatientsSummaryPart
 {
-    public class PatientsHandlerRes
+    public class UpdatePatientsSummaryPartRes
     {
+
     }
 }
