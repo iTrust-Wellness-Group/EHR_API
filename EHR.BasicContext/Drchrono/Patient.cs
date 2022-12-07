@@ -18,14 +18,53 @@ namespace EHR.Context.Drchrono
         {
            return this.request.GetAsync<T>("patients");
         }
-        public void getPatient(string patientId)
-        {
-
-        }
-
         public Task<T> createPatient<T>(object data)
         {
             return this.request.PostAsync<T>("patients",data);
+        }
+        public Task<T> updatePatient<T>(object data)
+        {
+            return this.request.PostAsync<T>("patients", data);
+        }
+        public Task<T> deletePatient<T>(object data)
+        {
+            return this.request.PostAsync<T>("patients", data);
+        }
+        public Task<T> getPatientsCCDA<T>()
+        {
+            return this.request.GetAsync<T>("patients");
+        }
+        public Task<T> getOnpatientAccess<T>()
+        {
+            return this.request.GetAsync<T>("onpatientAccess");
+        }
+        public Task<T> CreateOnpatientAccess<T>(object data)
+        {
+            return this.request.PostAsync<T>("onpatientAccess", data);
+        }
+        public Task<T> DeleteOnpatientAccess<T>(object data)
+        {
+            return this.request.PostAsync<T>("onpatientAccess", data);
+        }
+        public Task<T> GetPatientsSummary<T>()
+        {
+            return this.request.GetAsync<T>("patientsSummary");
+        }
+        public Task<T> CreatPatientsSummary<T>(object data)
+        {
+            return this.request.PostAsync<T>("PatientsSummary", data);
+        }
+        public Task<T> UpdatePatientsSummary<T>(object data)
+        {
+            return this.request.PostAsync<T>("PatientsSummary", data);
+        }
+        public Task<T> UpdatePatientsSummaryPart<T>(object data)
+        {
+            return this.request.PostAsync<T>("PatientsSummary", data);
+        }
+        public Task<T> DeletePatientsSummary<T>(object data)
+        {
+            return this.request.PostAsync<T>("onpatientAccess", data);
         }
     }
 }

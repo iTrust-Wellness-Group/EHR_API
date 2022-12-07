@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EHR.Database
-build_property.ProjectDir = /Users/eddie/EHR_API/EHR.Database/
+build_property.ProjectDir = d:\iTrust-Wellness-Group\EHR_API\EHR.Database\

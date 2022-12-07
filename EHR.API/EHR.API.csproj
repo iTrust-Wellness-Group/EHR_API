@@ -28,10 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
-    <None Remove="Controllers\CRM\Lead\" />
+    <Folder Include="Controllers\DrChrono\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\CRM\Lead\" />
-  </ItemGroup>
+
 </Project>
