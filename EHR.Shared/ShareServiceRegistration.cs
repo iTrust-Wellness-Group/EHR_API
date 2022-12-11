@@ -14,6 +14,7 @@ namespace EHR.Shared
         public static IServiceCollection AddShareServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton<IHttpRequest, HttpRequest>();
+            services.AddSingleton<IHttpRequest, HttpRequest>();
             return services;
         }
     }

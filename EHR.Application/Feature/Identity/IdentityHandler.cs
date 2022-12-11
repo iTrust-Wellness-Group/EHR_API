@@ -1,7 +1,10 @@
 ﻿using EHR.Application.Feature.Identity.Models;
 using EHR.Application.Feature.UnitOfWork;
 using EHR.Application.Models;
+using EHR.Identity.Interface;
 using EHR.Identity.Models;
+using EHR.Shared.Attributes;
+using EHR.Shared.Extension;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -14,10 +17,13 @@ namespace EHR.Application.Feature.Identity
 {
     public class IdentityHandler : BaseHandler, IRequestHandler<LoginModel, ResponseData<LoginResponseModel>>
     {
-        IServiceContext service;
-        public IdentityHandler(IServiceContext service)
+        //IServiceContext service;
+        [Inject] IJWTService jWTService;
+
+        public IdentityHandler(IServiceProvider provider)
         {
-            this.service = service;
+            provider.Inject(this);
+            //this.service = service;
         }
         public async Task<ResponseData<LoginResponseModel>> Handle(LoginModel request, CancellationToken cancellationToken)
         {
@@ -32,10 +38,10 @@ namespace EHR.Application.Feature.Identity
 
             };
 
-            var token = this.service.jwtService.GenerateTokens(JWTUserTypeEnum.Backend, claims, DateTime.Now);
+            //var token = this.service.jwtService.GenerateTokens(JWTUserTypeEnum.Backend, claims, DateTime.Now);
             var response = new LoginResponseModel()
             {
-                Token = token,
+                Token = "123",
                 RefreshToken = "9472e6a1-b91e-408c-bca9-8a149c3738e4"
             };
             var data = new ResponseData<LoginResponseModel>(response);

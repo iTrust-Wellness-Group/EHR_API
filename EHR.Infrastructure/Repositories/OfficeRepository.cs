@@ -45,6 +45,7 @@ namespace EHR.Infrastructure.Repositories.Query
 
         public QueryOfficeRes? getOffice(string Name)
         {
+            
             return this.context.Offices.Select(x => new QueryOfficeRes { Id = x.Id, Name = x.Name }).Where(x=>x.Name.Contains(Name)).FirstOrDefault();
         }
 
