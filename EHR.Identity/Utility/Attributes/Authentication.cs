@@ -23,7 +23,6 @@ namespace EHR.Identity.Utility.Attributes
             IJWTService service = new JWTService();
 
             String token = context.HttpContext.Request.Headers.Authorization.ToString().Split(' ')[1];
-
             var claims = service.ReadClaims(token);
             foreach (var claim in claims)
             {

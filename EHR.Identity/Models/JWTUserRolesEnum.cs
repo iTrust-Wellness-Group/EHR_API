@@ -12,5 +12,6 @@ namespace EHR.Identity.Models
         Staff = 2,
         Doctor =3,
         User = 4,
+        Service=5
     }
 }
