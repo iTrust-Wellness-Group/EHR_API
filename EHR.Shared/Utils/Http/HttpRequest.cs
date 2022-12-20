@@ -19,7 +19,7 @@ namespace EHR.Shared.Utils.Http
         private string _token = "";
         private string _secretKey = "";
         private const string MediaTypeJson = "application/json";
-     
+
         public string BaseUrl
         {
             set
@@ -43,6 +43,23 @@ namespace EHR.Shared.Utils.Http
         }
         public string Credential { get; set; }
 
+        public string AttachUrlParam(string url, Dictionary<string, string> urlParams)
+        {
+
+            #region Add url parameters
+            if (urlParams is not null)
+            {
+                url += "?";
+
+                foreach (var key in urlParams.Keys)
+                {
+                    url += $"{key}={urlParams[key]}&";
+                }
+            }
+            #endregion
+            return url;
+        }
+
         public async Task<string> PostAsync(string url, object input)
         {
             EnsureHttpClientCreated();
@@ -57,8 +74,11 @@ namespace EHR.Shared.Utils.Http
             }
         }
 
-        public async Task<TResult> PostAsync<TResult>(string url, object input)
+     
+        public async Task<TResult> PostAsync<TResult>(string url, object input, Dictionary<string, string>? urlParams = null)
         {
+            if (urlParams != null)
+                url = AttachUrlParam(url, urlParams);
             var strResponse = await PostAsync(url, input);
 
             return JsonConvert.DeserializeObject<TResult>(strResponse, new JsonSerializerSettings
@@ -66,10 +86,13 @@ namespace EHR.Shared.Utils.Http
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             })!;
         }
-
-        public async Task<TResult> GetAsync<TResult>(string url)
+     
+        public async Task<TResult> GetAsync<TResult>(string url, Dictionary<string, string>? urlParams = null)
         {
+
+            url = AttachUrlParam(url, urlParams);
             var strResponse = await GetAsync(url);
+
 
             return JsonConvert.DeserializeObject<TResult>(strResponse, new JsonSerializerSettings
             {
@@ -77,8 +100,10 @@ namespace EHR.Shared.Utils.Http
             })!;
         }
 
+
         public async Task<string> GetAsync(string url)
         {
+
             EnsureHttpClientCreated();
 
             using (var response = await _httpClient!.GetAsync(url))
@@ -87,6 +112,7 @@ namespace EHR.Shared.Utils.Http
                 return await response.Content.ReadAsStringAsync();
             }
         }
+
 
         public async Task<string> PutAsync(string url, object input)
         {
@@ -139,7 +165,7 @@ namespace EHR.Shared.Utils.Http
             }
 
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(MediaTypeJson));
-            switch(this.Credential)
+            switch (this.Credential)
             {
                 case "drchronoAccessToken":
                     _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
