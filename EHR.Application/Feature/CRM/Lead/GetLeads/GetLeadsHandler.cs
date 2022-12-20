@@ -25,7 +25,7 @@ namespace EHR.Application.Feature.CRM.Lead.GetLeads
 
         public async Task<ResponseData<GetLeadsRes>> Handle(GetLeadsReq request, CancellationToken cancellationToken)
         {
-            var patients = await _crmContext.Leads.getLeads<GetLeadsRes>();
+            var patients = await _crmContext.Leads.getLeadMetdadata<GetLeadsRes>();
             return await Task.FromResult(new ResponseData<GetLeadsRes>(patients));
         }
     }
