@@ -1,5 +1,6 @@
 ﻿using EHR.Application.Contract.Identity;
-using EHR.Application.Feature.Identity.Models;
+using EHR.Application.Feature.Identity.Login;
+using EHR.Application.Feature.Identity.Refresh;
 using EHR.Application.Models;
 using EHR.Database.Context;
 using EHR.Database.Entities;
@@ -23,7 +24,7 @@ namespace EHR.Infrastructure.Repositories
             this.queryContext = queryContext;
         }
 
-        public Task<Account> LoginAsync(LoginModel req)
+        public Task<Account> LoginAsync(IdentityReq req)
         {
             throw new NotImplementedException();
         }
@@ -33,7 +34,7 @@ namespace EHR.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public bool RefreshTokenAsync(RefreshModel req)
+        public bool RefreshTokenAsync(RefreshReq req)
         {
            Account? account = this.commandContext.Accounts.Where(x => x.Id.Equals(req.UserID) && x.RefreshToken.Equals(req.RefreshToken)).FirstOrDefault();
             if (account != null)
@@ -43,7 +44,7 @@ namespace EHR.Infrastructure.Repositories
             
         }
 
-        public bool RevokeToken(RefreshModel req)
+        public bool RevokeToken(RefreshReq req)
         {
             Account? account = this.commandContext.Accounts.Find(req.UserID);
             if (account != null)

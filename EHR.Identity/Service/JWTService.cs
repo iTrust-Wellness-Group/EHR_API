@@ -31,7 +31,7 @@ namespace EHR.Identity.Service
         public string ReadClaimByExp(string token)
         {
             if (token.Contains("Bearer"))
-                token =token.Split(' ')[1];
+                token = token.Split(' ')[1];
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
             var s = jwtSecurityToken.Claims.First(claim => claim.Type == "exp").Value;
@@ -143,6 +143,18 @@ namespace EHR.Identity.Service
             var jwtSecurityToken = handler.ReadJwtToken(token);
             String value = jwtSecurityToken.Claims.First(claim => claim.Type == name).Value;
             return value;
+        }
+
+        public string GenerateServiceTokens(Claim[] claims)
+        {
+            var jwtToken = new JwtSecurityToken(
+                _backendJwtTokenConfig.Issuer,
+                _backendJwtTokenConfig.Audience ?? string.Empty,
+                claims,
+                expires: DateTime.Now.AddYears(99),
+                signingCredentials: new SigningCredentials(new SymmetricSecurityKey(_backendSecret), SecurityAlgorithms.HmacSha256Signature));
+            var accessToken = new JwtSecurityTokenHandler().WriteToken(jwtToken);
+            return accessToken;
         }
     }
 }

@@ -29,14 +29,12 @@ namespace EHR.API.Controllers.Drchrono
             _mediator = mediator;
         }
         [HttpGet("patients")]
-        [AllowAnonymous]
         public async Task<IActionResult> GetPatients()
         {
             var res = await _mediator.Send(new PatientsHandlerReq());
             return Ok(res);
         }
         [HttpPost("patients")]
-        [AllowAnonymous]
         public async Task<IActionResult> CreatePatient(CreatePatientReq req)
         {
             var res = await _mediator.Send(req);

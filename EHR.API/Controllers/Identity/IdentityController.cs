@@ -1,5 +1,7 @@
 ﻿using EHR.API.Controllers.Base;
-using EHR.Application.Feature.Identity.Models;
+using EHR.Application.Feature.Identity.LeadSquaredLogin;
+using EHR.Application.Feature.Identity.Login;
+using EHR.Application.Feature.Identity.Refresh;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -19,7 +21,15 @@ namespace EHR.API.Controllers.Identity
 
         [HttpPost("Login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginModel req)
+        public async Task<IActionResult> Login(IdentityReq req)
+        {
+            var result = await this._mediator.Send(req);
+            return Ok(result);
+        }
+
+        [HttpPost("LeadSquaredLogin")]
+        [AllowAnonymous]
+        public async Task<IActionResult> LeadSquaredLogin(LeadSquaredLoginReq req)
         {
             var result = await this._mediator.Send(req);
             return Ok(result);
@@ -27,7 +37,7 @@ namespace EHR.API.Controllers.Identity
 
         [HttpPost("refresh")]
         [AllowAnonymous]
-        public async Task<IActionResult> refresh(RefreshModel req)
+        public async Task<IActionResult> refresh(RefreshReq req)
         {
             var result = await this._mediator.Send(req);
             return Ok(result);

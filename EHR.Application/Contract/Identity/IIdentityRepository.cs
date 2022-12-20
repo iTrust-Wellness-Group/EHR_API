@@ -1,4 +1,5 @@
-﻿using EHR.Application.Feature.Identity.Models;
+﻿using EHR.Application.Feature.Identity.Login;
+using EHR.Application.Feature.Identity.Refresh;
 using EHR.Application.Models;
 using EHR.Database.Entities;
 using System;
@@ -13,9 +14,9 @@ namespace EHR.Application.Contract.Identity
     {
 
         #region 基本系統登入
-        public Task<Account> LoginAsync(LoginModel req);
-        public bool RefreshTokenAsync(RefreshModel req);
-        public bool RevokeToken(RefreshModel req);
+        public Task<Account> LoginAsync(IdentityReq req);
+        public bool RefreshTokenAsync(RefreshReq req);
+        public bool RevokeToken(RefreshReq req);
         #endregion
 
         #region 第三方登入

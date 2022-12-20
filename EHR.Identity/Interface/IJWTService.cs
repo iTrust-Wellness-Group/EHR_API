@@ -13,6 +13,7 @@ namespace EHR.Identity.Interface
     {
         public string GenerateTokens(JWTUserTypeEnum jute, Claim[] claims, DateTime now, bool isRefresh = false);
 
+        public string GenerateServiceTokens(Claim[] claims);
         public string ReadClaimByExp(string token);
         public DateTime ReadClaimByDtExp(string token);
 
