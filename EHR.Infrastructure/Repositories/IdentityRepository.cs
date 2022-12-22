@@ -49,7 +49,7 @@ namespace EHR.Infrastructure.Repositories
             Account? account = this.commandContext.Accounts.Find(req.UserID);
             if (account != null)
             {
-                account.RefreshToken = req.RefreshToken;
+                account.RefreshToken = req.RefreshToken.ToString();
                 this.commandContext.SaveChanges();
                 return true;
             }
