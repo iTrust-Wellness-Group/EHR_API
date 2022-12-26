@@ -21,7 +21,7 @@ namespace EHR.Application.Feature.CRM.Office.CreateOffice
         public async Task<Response> Handle(CreateOfficeReq request, CancellationToken cancellationToken)
         {
             // TODO: use AutoMapper to map model and enitiy
-            bool isSuccess = true; //await this._serviceContext.office.cre(request.Name);
+            bool isSuccess = await this._serviceContext.office.createOffice(request.Name);
             if (isSuccess)
                 return await Task.FromResult(new Response(200, true));
             else
