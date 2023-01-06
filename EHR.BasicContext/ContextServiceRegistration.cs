@@ -17,7 +17,7 @@ namespace EHR.Context
         public static IServiceCollection AddContextServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<DrchronoContext>();
-            services.AddScoped<CRMContext>();
+            services.AddScoped<LeadsquaredContext>();
 
             return services;
         }

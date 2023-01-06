@@ -20,7 +20,7 @@ namespace EHR.Infrastructure
         {
             #region DB Context
             SecrectModel secretValue = SecretsManager.GetSecret<SecrectModel>("auroradb1AuroraClusterCredentials")!;
-            String connectionStrig = $"Host={secretValue.host}:{secretValue.port};Database={secretValue.environment};Username={secretValue.username};Password={secretValue.password}";
+            String connectionStrig = $"Host={secretValue.host}:{secretValue.port};Database={secretValue.environment};Username={secretValue.username};Password='{secretValue.password}'";
           //  services.AddSingleton<DapperQueryContext>(options=>new DapperQueryContext(configuration,connectionStrig));
             services.AddDbContext<DatabaseContext>(options =>
               options.UseNpgsql(connectionStrig)

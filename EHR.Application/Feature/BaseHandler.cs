@@ -9,6 +9,6 @@ namespace EHR.Application.Feature
 {
     public class BaseHandler 
     {
-    
+        
     }
 }

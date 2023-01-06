@@ -15,9 +15,9 @@ namespace EHR.Application.Feature.CRM.Lead.GetLeads
     public class GetLeadsHandler : BaseHandler, IRequestHandler<GetLeadsReq, ResponseData<GetLeadsRes>>
     {
         IServiceContext _serviceContext;
-        CRMContext _crmContext;
+        LeadsquaredContext _crmContext;
 
-        public GetLeadsHandler(IServiceContext serviceContext, CRMContext crmContext)
+        public GetLeadsHandler(IServiceContext serviceContext, LeadsquaredContext crmContext)
         {
             _serviceContext = serviceContext;
             _crmContext = crmContext;

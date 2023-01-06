@@ -1,0 +1,166 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EHR.Application.Feature.DetailedForm.GetFormData
+{
+    public class FormDataModel
+    {
+
+        public object OptedOutDate { get; set; }
+        public object ProspectActivityName_Min { get; set; }
+        public string ProspectID { get; set; }
+        public string ProspectAutoId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public object EmailAddress { get; set; }
+        public string Company { get; set; }
+        public string Origin { get; set; }
+        public object Phone { get; set; }
+        public object Mobile { get; set; }
+        public object Website { get; set; }
+        public object TimeZone { get; set; }
+        public string Source { get; set; }
+        public object SourceMedium { get; set; }
+        public object Notes { get; set; }
+        public object SourceCampaign { get; set; }
+        public object SourceContent { get; set; }
+        public string DoNotEmail { get; set; }
+        public string DoNotCall { get; set; }
+        public string ProspectStage { get; set; }
+        public string Score { get; set; }
+        public object Revenue { get; set; }
+        public string EngagementScore { get; set; }
+        public object TotalVisits { get; set; }
+        public object PageViewsPerVisit { get; set; }
+        public object AvgTimePerVisit { get; set; }
+        public object RelatedProspectId { get; set; }
+        public string ProspectActivityId_Min { get; set; }
+        public string ProspectActivityDate_Min { get; set; }
+        public object Web_Referrer { get; set; }
+        public object Web_RefKeyword { get; set; }
+        public string ProspectActivityId_Max { get; set; }
+        public string ProspectActivityName_Max { get; set; }
+        public string ProspectActivityDate_Max { get; set; }
+        public object RelatedLandingPageId { get; set; }
+        public object FirstLandingPageSubmissionId { get; set; }
+        public object FirstLandingPageSubmissionDate { get; set; }
+        public string OwnerId { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedOn { get; set; }
+        public string ModifiedBy { get; set; }
+        public string ModifiedOn { get; set; }
+        public object LeadConversionDate { get; set; }
+        public string StatusCode { get; set; }
+        public string StatusReason { get; set; }
+        public string IsLead { get; set; }
+        public object mx_Street1 { get; set; }
+        public object mx_Street2 { get; set; }
+        public object mx_City { get; set; }
+        public object mx_State { get; set; }
+        public string mx_Country { get; set; }
+        public object mx_Zip { get; set; }
+        public string LastModifiedOn { get; set; }
+        public string mx_Weight_Division { get; set; }
+        public object mx_Gym { get; set; }
+        public string mx_Athlete_Age { get; set; }
+        public object mx_Secondary_Email_Address { get; set; }
+        public object mx_Secondary_Email { get; set; }
+        public object mx_Custom_Score { get; set; }
+        public object mx_Age { get; set; }
+        public object mx_12th_Grade_Results { get; set; }
+        public object JobTitle { get; set; }
+        public object mx_Co_Applicant_First_Name { get; set; }
+        public object mx_Co_Applicant_Last_Name { get; set; }
+        public object mx_Co_Applicant_Email { get; set; }
+        public object mx_Permanent_Address_1 { get; set; }
+        public object mx_Permanent_Address_2 { get; set; }
+        public string mx_Do_You_Have_a_Co_Applicant { get; set; }
+        public object mx_Is_Permanent_Address_Same_as_Current_Address { get; set; }
+        public object mx_Renewal_Date { get; set; }
+        public object mx_Identification { get; set; }
+        public string mx_Identification_Documents { get; set; }
+        public object mx_Doctors { get; set; }
+        public object mx_Product { get; set; }
+        public string mx_WhatsApp_Opt_Out { get; set; }
+        public object mx_Date_of_Birth { get; set; }
+        public object mx_PAN_Number { get; set; }
+        public object mx_Fathers_Name { get; set; }
+        public object mx_Product_Price { get; set; }
+        public object mx_Product_Specification { get; set; }
+        public string mx_Products { get; set; }
+        public string mx_Docs { get; set; }
+        public object mx_Retype_Password { get; set; }
+        public object mx_Donation_Amount { get; set; }
+        public object mx_Course_Type { get; set; }
+        public object mx_Application_Submitted_On { get; set; }
+        public string mx_Video_KYC { get; set; }
+        public object mx_Company { get; set; }
+        public object mx_Aadhaar_Number { get; set; }
+        public string mx_Degree { get; set; }
+        public object mx_Documentation { get; set; }
+        public string NotableEvent { get; set; }
+        public string NotableEventdate { get; set; }
+        public object SourceReferrer { get; set; }
+        public string LastVisitDate { get; set; }
+        public string CompanyType { get; set; }
+        public string RelatedCompanyId { get; set; }
+        public string IsPrimaryContact { get; set; }
+        public object MailingPreferences { get; set; }
+        public string QualityScore01 { get; set; }
+        public object TwitterId { get; set; }
+        public object FacebookId { get; set; }
+        public object LinkedInId { get; set; }
+        public object SkypeId { get; set; }
+        public object GTalkId { get; set; }
+        public object GooglePlusId { get; set; }
+        public object PhotoUrl { get; set; }
+        public object ConversionReferrerURL { get; set; }
+        public object SourceReferrerURL { get; set; }
+        public object SourceIPAddress { get; set; }
+        public object Latitude { get; set; }
+        public object Longitude { get; set; }
+        public object mx_Portal_IsPortalUser { get; set; }
+        public string CurrentOptInStatus { get; set; }
+        public object OptInDate { get; set; }
+        public object OptInDetails { get; set; }
+        public object LastOptInEmailSentDate { get; set; }
+        public object DoNotTrack { get; set; }
+        public string RelatedCompanyIdName { get; set; }
+        public string RelatedCompanyOwnerId { get; set; }
+        public string CompanyTypeName { get; set; }
+        public string CompanyTypePluralName { get; set; }
+        public string LeadLastModifiedOn { get; set; }
+        public string OwnerIdName { get; set; }
+        public string OwnerIdEmailAddress { get; set; }
+        public string Groups { get; set; }
+        public string CreatedByName { get; set; }
+        public string ModifiedByName { get; set; }
+        public string Account_CompanyName { get; set; }
+        public string Account_ShortName { get; set; }
+        public string Account_TimeZone { get; set; }
+        public string Account_Website { get; set; }
+        public string Account_Street1 { get; set; }
+        public string Account_Street2 { get; set; }
+        public string Account_City { get; set; }
+        public string Account_State { get; set; }
+        public string Account_Country { get; set; }
+        public string Account_Zip { get; set; }
+        public string Account_Fax { get; set; }
+        public string Account_Phone { get; set; }
+        public string Owner_FirstName { get; set; }
+        public string Owner_MiddleName { get; set; }
+        public string Owner_LastName { get; set; }
+        public string Owner_EmailAddress { get; set; }
+        public string Owner_FullName { get; set; }
+        public string Owner_TimeZone { get; set; }
+        public string Owner_AssociatedPhoneNumbers { get; set; }
+        public string Org_ShortCode { get; set; }
+        public string Account_Address { get; set; }
+        public string CanUpdate { get; set; }
+
+
+    }
+}

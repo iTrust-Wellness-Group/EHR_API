@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace EHR.Context.CRM
 {
-    public class CRMContext : BasicContext
+    public class LeadsquaredContext : BasicContext
     {
-        private static string baseUrl = "http:/api-us11.leadsquared.com/v2/";
+        private static string baseUrl = "http://api-us11.leadsquared.com/v2/";
         public Leads Leads { get; private set; }
         public Email Email { get; private set; }
         public File File { get; private set; }
-        public CRMContext(IHttpRequest httpRequest):base(httpRequest,baseUrl,Credential.leadsquaredAccessToken)
+        public LeadsquaredContext(IHttpRequest httpRequest):base(httpRequest,baseUrl,Credential.leadsquaredAccessToken)
         {
             // generate all of Drchrono class
             Leads = new Leads(httpRequest);

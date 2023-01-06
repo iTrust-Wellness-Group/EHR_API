@@ -30,6 +30,8 @@ public partial class DatabaseContext : DbContext
 
     public virtual DbSet<AutomationLog> AutomationLogs { get; set; }
 
+    public virtual DbSet<CsrfToken> CsrfTokens { get; set; }
+
     public virtual DbSet<DrchronoAppointment> DrchronoAppointments { get; set; }
 
     public virtual DbSet<DrchronoIdLookup> DrchronoIdLookups { get; set; }
@@ -54,7 +56,7 @@ public partial class DatabaseContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Host=aurora-auroradatabase5475d328-1fhhlc5ey771i.cluster-csgv9gisrp7z.us-east-2.rds.amazonaws.com:48040;Database=development;Username=cluster_root;Password=z=oJ47hJ7PuvlTSg+^GM#vAfUf<hd8TR");
+        => optionsBuilder.UseNpgsql("Host=aurora-auroradatabase5475d328-1fhhlc5ey771i.cluster-csgv9gisrp7z.us-east-2.rds.amazonaws.com:48040;Database=development;Username=cluster_root;Password='M;D>UOyZxLW73y>1{oWA(Sx!aq0DQ2C3'");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -293,6 +295,22 @@ public partial class DatabaseContext : DbContext
             entity.Property(e => e.Timestamp)
                 .HasDefaultValueSql("statement_timestamp()")
                 .HasColumnName("timestamp");
+        });
+
+        modelBuilder.Entity<CsrfToken>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("CsrfToken_pkey");
+
+            entity.ToTable("CsrfToken");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Expiry).HasColumnName("expiry");
+            entity.Property(e => e.LeadId)
+                .HasMaxLength(36)
+                .HasColumnName("leadId");
+            entity.Property(e => e.Token)
+                .HasMaxLength(128)
+                .HasColumnName("token");
         });
 
         modelBuilder.Entity<DrchronoAppointment>(entity =>

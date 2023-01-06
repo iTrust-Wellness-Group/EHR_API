@@ -28,3 +28,18 @@ C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Identit
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Identity\obj\Debug\net7.0\refint\EHR.Identity.dll
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.pdb
 C:\Users\leo\Desktop\ITrust-Wellness-Group工作專案專案\EHR.API\EHR.Identity\obj\Debug\net7.0\ref\EHR.Identity.dll
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\bin\Debug\net7.0\EHR.Identity.deps.json
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\bin\Debug\net7.0\EHR.Identity.dll
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\bin\Debug\net7.0\EHR.Identity.pdb
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\bin\Debug\net7.0\EHR.Database.dll
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\bin\Debug\net7.0\EHR.Database.pdb
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.csproj.AssemblyReference.cache
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.AssemblyInfoInputs.cache
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.AssemblyInfo.cs
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.csproj.CoreCompileInputs.cache
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.csproj.CopyComplete
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.dll
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\refint\EHR.Identity.dll
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\EHR.Identity.pdb
+C:\Users\Wen Ching24\Documents\EHR_API\EHR.Identity\obj\Debug\net7.0\ref\EHR.Identity.dll

@@ -1,6 +1,7 @@
 ﻿using EHR.Shared.Utils.Http;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -55,13 +56,19 @@ namespace EHR.Context.CRM
 
         public Task<T> getLeadsByCriteria<T>(object data)
         {
-  
-
             return this.request!.PostAsync<T>("LeadManagement.svc/Leads.Get", data);
         }
 
-        public Task<T> updateLead<T>(object data, Dictionary<string, string> urlParams)
+        public Task<T> updateLead<T>(string leadId, object data)
         {
+            /*https://apidocs.leadsquared.com/update-a-lead/
+             *leadId is attached as urlParameter
+             */
+
+            Dictionary<string, string> urlParams = new Dictionary<string, string>
+            {
+                { "leadId" , leadId }
+            };
             return this.request!.PostAsync<T>("LeadManagement.svc/Lead.Update", data, urlParams);
         }
 

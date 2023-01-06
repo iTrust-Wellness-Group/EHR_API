@@ -9,7 +9,7 @@ namespace EHR.Application.Models
     public class Response
     {
         public int Code { get; set; } = 200;
-        public String Message { get; set; } = "執行成功";
+        public String Message { get; set; } = "Success";
         public bool IsSuccess { get; set; } = true;
 
         public Response()
