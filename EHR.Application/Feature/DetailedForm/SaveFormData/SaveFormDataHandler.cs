@@ -6,14 +6,18 @@ using EHR.Application.Models;
 using EHR.Context.CRM;
 using EHR.Database.Context;
 using MediatR;
+using MongoDB.Bson.IO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+
+
 
 namespace EHR.Application.Feature.DetailedForm.SaveFormData
 {
@@ -29,17 +33,22 @@ namespace EHR.Application.Feature.DetailedForm.SaveFormData
             _leadsquaredContext = leadsquaredContext;
         }
 
+      
+
         public async Task<ResponseData<SaveFormDataRes>> Handle(SaveFormDataReq request, CancellationToken cancellationToken)
         {
             string leadId = LookupCsrfToken(request.csrfToken);
 
-
+            Dictionary<string,object> jsonFormData = JsonSerializer.Deserialize<Dictionary<string, object>>(request.formData);
+            
+            string sectionKey = jsonFormData.Keys.First();
+            
             List<AttributeValuePairModel> data = new List<AttributeValuePairModel>
             {
-                new AttributeValuePairModel { Attribute = "LastName", Value = request.formData }
+                new AttributeValuePairModel { Attribute = $"mx_Detailed_Form_{sectionKey}", Value = request.formData}
             };
 
-
+        
             SaveFormDataRes response = await _leadsquaredContext.Leads.updateLead<SaveFormDataRes>(leadId, data);
 
 

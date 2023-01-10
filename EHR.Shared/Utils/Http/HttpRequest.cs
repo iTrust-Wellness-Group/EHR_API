@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Net.Http;
+using Amazon.Runtime;
+
 namespace EHR.Shared.Utils.Http
 {
     public class HttpRequest : IHttpRequest, IDisposable
@@ -33,6 +35,7 @@ namespace EHR.Shared.Utils.Http
             {
                 this._token = value;
             }
+            get { return this._token; }
         }
         public string SecretKey
         {
@@ -40,6 +43,7 @@ namespace EHR.Shared.Utils.Http
             {
                 this._secretKey = value;
             }
+            get { return this._secretKey; }
         }
         public string Credential { get; set; }
 
@@ -74,19 +78,43 @@ namespace EHR.Shared.Utils.Http
             }
         }
 
-     
+      
+
+
         public async Task<TResult> PostAsync<TResult>(string url, object input, Dictionary<string, string>? urlParams = null)
         {
             if (urlParams != null)
                 url = AttachUrlParam(url, urlParams);
+
             var strResponse = await PostAsync(url, input);
+          
 
             return JsonConvert.DeserializeObject<TResult>(strResponse, new JsonSerializerSettings
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             })!;
         }
-     
+
+        public async Task<TResult> PostAsync<TResult>(string url, MultipartFormDataContent input, Dictionary<string, string>? urlParams = null)
+        {
+            if (urlParams != null)
+                url = AttachUrlParam(url, urlParams);
+
+            EnsureHttpClientCreated();
+
+           
+            
+            using (var response = await _httpClient!.PostAsync(url, input))
+            {
+                response.EnsureSuccessStatusCode();
+
+                return JsonConvert.DeserializeObject<TResult>(await response!.Content.ReadAsStringAsync());
+
+                
+            }
+          
+        }
+
         public async Task<TResult> GetAsync<TResult>(string url, Dictionary<string, string>? urlParams = null)
         {
 
@@ -191,11 +219,9 @@ namespace EHR.Shared.Utils.Http
             {
                 return string.Empty;
             }
+            string reqData = JsonConvert.SerializeObject(obj);
 
-            return JsonConvert.SerializeObject(obj, new JsonSerializerSettings
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
-            });
+            return reqData;
         }
 
         private static string NormalizeBaseUrl(string url)

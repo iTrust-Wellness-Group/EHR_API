@@ -11,6 +11,7 @@ namespace EHR.Context.CRM
     public class LeadsquaredContext : BasicContext
     {
         private static string baseUrl = "http://api-us11.leadsquared.com/v2/";
+        private static string baseFileUrl = "https://files-us11.leadsquared.com/";
         public Leads Leads { get; private set; }
         public Email Email { get; private set; }
         public File File { get; private set; }
@@ -22,5 +23,6 @@ namespace EHR.Context.CRM
             File = new File(httpRequest);
 
         }
+
     }
 }

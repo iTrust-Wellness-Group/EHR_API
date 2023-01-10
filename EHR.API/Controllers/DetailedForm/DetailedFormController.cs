@@ -1,6 +1,7 @@
 ﻿
 using EHR.API.Controllers.Base;
 using EHR.Application.Feature.DetailedForm.GetFormData;
+using EHR.Application.Feature.DetailedForm.SaveFormAttachments;
 using EHR.Application.Feature.DetailedForm.SaveFormData;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -40,6 +41,12 @@ namespace EHR.API.Controllers.DetailedForm
             return Ok(res);
         }
 
+        [HttpPost("save/attachment")]
+        public async Task<IActionResult> SaveAttachments([FromForm] SaveFormAttachmentsReq req)
+        {
+            var res = await _mediator.Send(req);
+            return Ok(res);
+        }
 
     }
 }
