@@ -33,24 +33,24 @@ namespace EHR.Context.CRM
             //Different subdomain for file related APIs
             this.request!.BaseUrl = "https://files-us11.leadsquared.com/";
 
-            //Process Hexadecimal representation of Image
-            
-
             MultipartFormDataContent formContent = new MultipartFormDataContent
             {
                 {new StringContent("1"), "FileType"},
                 {new StringContent("0"), "FileStorageType"},
                 {new StringContent("0"), "Entity"},
                 {new StringContent(leadId), "Id"},
+                {new StringContent($"mx_{formFile.Name}"), "SchemaName"},
+                {new StringContent("mx_CustomObject_1"), "EntitySchemaName"},
                 {new StringContent(this.request!.Token), "AccessKey"},
                 {new StringContent(this.request!.SecretKey), "SecretKey"},
-                {new StreamContent(formFile.OpenReadStream()), "uploadFiles", formFile.Name}
+                {new StreamContent(formFile.OpenReadStream()), "uploadFiles", formFile.Name +".png"}
             };
 
             return this.request!.PostAsync<T>("File/Upload", formContent);
         }
 
- 
+
+
 
     }
 }

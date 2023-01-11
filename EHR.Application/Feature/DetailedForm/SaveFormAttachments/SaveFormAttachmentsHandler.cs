@@ -25,7 +25,7 @@ namespace EHR.Application.Feature.DetailedForm.SaveFormAttachments
     {
         IServiceContext _serviceContext;
         LeadsquaredContext _leadsquaredContext;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+
 
         public SaveFormAttachmentsHandler(
             IServiceContext serviceContext, 
@@ -35,7 +35,7 @@ namespace EHR.Application.Feature.DetailedForm.SaveFormAttachments
         {
             _serviceContext = serviceContext;
             _leadsquaredContext = leadsquaredContext;
-            _httpContextAccessor = httpContextAccessor;
+       
 
         }
 

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Contract\DrChrono\**" />
+    <EmbeddedResource Remove="Contract\DrChrono\**" />
+    <None Remove="Contract\DrChrono\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="AWS" Version="1.1.0" />
@@ -23,10 +29,6 @@
     <ProjectReference Include="..\EHR.BasicContext\EHR.Context.csproj" />
     <ProjectReference Include="..\EHR.Database\EHR.Database.csproj" />
     <ProjectReference Include="..\EHR.Identity\EHR.Identity.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Contract\DrChrono\" />
   </ItemGroup>
 
 </Project>

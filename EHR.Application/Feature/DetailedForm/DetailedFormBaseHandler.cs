@@ -30,7 +30,8 @@ namespace EHR.Application.Feature.DetailedForm
             var query = _databaseContext.CsrfTokens.Where(c => c.Token == csrfToken).ToList();
             var token = query.FirstOrDefault<CsrfToken>();
 
-            if (token == null)  {throw new Exception ("Invalid token");}
+            if (token == null)  
+                throw new Exception ("Invalid token");
             
             DateTimeOffset currentTime = DateTimeOffset.UtcNow;
             long epochTime = currentTime.ToUnixTimeSeconds();

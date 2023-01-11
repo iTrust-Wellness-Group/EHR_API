@@ -13,6 +13,7 @@ namespace EHR.API.Controllers.DetailedForm
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class DetailedFormController : BaseController
     {
         private readonly IMediator _mediator;

@@ -11,6 +11,7 @@ namespace EHR.API.Controllers.Identity
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class IdentityController : BaseController
     {
         private readonly IMediator _mediator;
@@ -20,7 +21,6 @@ namespace EHR.API.Controllers.Identity
         }
 
         [HttpPost("Login")]
-        [AllowAnonymous]
         public async Task<IActionResult> Login(IdentityReq req)
         {
             var result = await this._mediator.Send(req);
@@ -28,7 +28,6 @@ namespace EHR.API.Controllers.Identity
         }
 
         [HttpPost("LeadSquaredLogin")]
-        [AllowAnonymous]
         public async Task<IActionResult> LeadSquaredLogin(LeadSquaredLoginReq req)
         {
             var result = await this._mediator.Send(req);
@@ -36,7 +35,6 @@ namespace EHR.API.Controllers.Identity
         }
 
         [HttpPost("refresh")]
-        [AllowAnonymous]
         public async Task<IActionResult> refresh(RefreshReq req)
         {
             var result = await this._mediator.Send(req);
